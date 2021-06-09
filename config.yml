@@ -1,0 +1,14 @@
+---
+server:
+  name: k8s-nfsserver
+  box: centos/7
+  hostname: nfs-server1
+  ip: 192.168.25.22
+  memory: 2048
+  cpu: 2
+  disksize: "150GB"
+
+nfs:
+  volume_name: "/mnt/kubernetes"
+  volume_permission: 777
+  cidr: "192.168.25.0/24"
