@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
       systemctl enable rpcbind
       mkdir -p #{MOUNT_VOLUME}
       chmod #{VOLUME_PERMISSION} #{MOUNT_VOLUME}
-      echo "#{MOUNT_VOLUME} #{MOUNT_CIDR} (rw,no_root_squash,sync)" >> /etc/exports
+      echo "#{MOUNT_VOLUME} #{MOUNT_CIDR}(rw,no_root_squash,sync)" >> /etc/exports
       systemctl restart nfs-server
     SCRIPT
   end
